@@ -79,3 +79,28 @@ Using separate subnets improves network organization and security. It allows dif
 ### Screenshot
 
 ![Subnets](03-subnets.png.png)
+
+
+---
+
+## Step 4: Create and Associate the Frontend Network Security Group
+
+### Objective
+
+Create a Network Security Group (NSG) for the frontend subnet and associate it with the subnet to control inbound and outbound network traffic.
+
+### Configuration
+
+| Setting | Value |
+|----------|-------|
+| NSG Name | Frontend-NSG |
+| Associated VNet | Lab-VNet |
+| Associated Subnet | Frontend-Subnet |
+
+### Why this step?
+
+A Network Security Group acts as a virtual firewall in Azure. By associating it with the frontend subnet, we can control which traffic is allowed to reach the resources hosted in that subnet.
+
+### Screenshot
+
+![Frontend NSG Association](04-frontend-nsg-association.png.png)
