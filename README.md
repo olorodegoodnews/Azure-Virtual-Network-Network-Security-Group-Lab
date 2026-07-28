@@ -54,3 +54,28 @@ A Virtual Network creates an isolated network in Azure where resources such as v
 ### Screenshot
 
 ![Virtual Network Overview](02-virtual-network-overview.png.png)
+
+
+---
+
+## Step 3: Create the Backend Subnet
+
+### Objective
+
+Create a second subnet inside the Virtual Network to separate backend resources from frontend resources.
+
+### Configuration
+
+| Setting | Value |
+|----------|-------|
+| Virtual Network | Lab-VNet |
+| Subnet Name | Backend-Subnet |
+| Address Range | 10.0.2.0/24 |
+
+### Why this step?
+
+Using separate subnets improves network organization and security. It allows different Network Security Group (NSG) rules to be applied to frontend and backend resources independently.
+
+### Screenshot
+
+![Subnets](03-subnets.png.png)
