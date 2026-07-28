@@ -104,3 +104,29 @@ A Network Security Group acts as a virtual firewall in Azure. By associating it 
 ### Screenshot
 
 ![Frontend NSG Association](04-frontend-nsg-association.png.png)
+
+
+
+---
+
+## Step 5: Create and Associate the Backend Network Security Group
+
+### Objective
+
+Create a Backend Network Security Group (NSG) and associate it with the Backend subnet to protect backend resources from unauthorized access.
+
+### Configuration
+
+| Setting | Value |
+|----------|-------|
+| NSG Name | Backend-NSG |
+| Associated VNet | Lab-VNet |
+| Associated Subnet | Backend-Subnet |
+
+### Why this step?
+
+The backend subnet hosts internal resources that should not be directly accessible from the internet. Associating a dedicated NSG allows us to apply stricter security rules to backend resources while keeping frontend resources separately managed.
+
+### Screenshot
+
+![Backend NSG Association](05-backend-nsg-association.png.png)
